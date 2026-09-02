@@ -1,0 +1,12 @@
+{
+  "playlist_id": "PLxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "playlist_name": "example playlist: season 2 live sessions",
+  "title_suffix": " | Season 2",
+  "description_template": "Watch the full session here.\n\nMore from the channel: https://example.com\n\n#example #livestudy",
+  "tags": [
+    "example tag one",
+    "example tag two",
+    "example tag three"
+  ],
+  "comment_text": "Thanks for watching! Season 3 drops soon."
+}

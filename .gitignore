@@ -1,0 +1,23 @@
+# Secrets, never commit these
+.env
+.env.local
+client_secret.json
+token.json
+config.json
+
+# Run artifacts (per-run, not source)
+snapshot_*.csv
+update_log.csv
+comments_log.csv
+revert_log.csv
+verify_report_*.txt
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.pytest_cache/
+
+# OS
+.DS_Store

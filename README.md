@@ -64,7 +64,10 @@ from what the script thinks it did).
 
 If something goes wrong at any step, [`TROUBLESHOOTING.md`](TROUBLESHOOTING.md)
 is organized by phase and covers the errors this kit has actually hit in
-production, not a generic FAQ.
+production, not a generic FAQ. [`FAILURE_MODES.md`](FAILURE_MODES.md) is the
+other direction — read it once before a real run: the ways this can go wrong
+silently (a wrong-channel auth, a duplicate comment, an un-revertable video)
+that you won't see as an error message until after they've already happened.
 
 ## Honest scope
 

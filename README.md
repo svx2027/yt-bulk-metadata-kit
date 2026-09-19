@@ -1,5 +1,7 @@
 # yt-bulk-metadata-kit
 
+[![tests](https://github.com/svx2027/yt-bulk-metadata-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/svx2027/yt-bulk-metadata-kit/actions/workflows/tests.yml)
+
 Bulk-update the title, description, and tags across every video in a YouTube
 playlist, using the official YouTube Data API v3 through OAuth (not a headless
 browser, not a channel login). Also snapshots current metadata for a one-command
@@ -68,6 +70,23 @@ production, not a generic FAQ. [`FAILURE_MODES.md`](FAILURE_MODES.md) is the
 other direction — read it once before a real run: the ways this can go wrong
 silently (a wrong-channel auth, a duplicate comment, an un-revertable video)
 that you won't see as an error message until after they've already happened.
+
+## Tests
+
+```bash
+pip install -r requirements.txt
+python3 -m unittest discover -s tests -v
+```
+
+13 tests covering `_helpers.py`'s error classification and CSV log helpers —
+the logic every script leans on for its retry/backoff decisions and its
+idempotency (skipping video IDs a previous run already completed). No
+network calls and no OAuth token needed, so `.github/workflows/tests.yml`
+runs the same suite on every push and pull request with no secrets
+configured. **Not covered:** the actual YouTube Data API calls
+(`snapshot.py`, `update_videos.py`, `post_comments.py`, `verify.py`,
+`revert.py`'s live paths) — those need a real OAuth token against a real
+channel, which is exactly what "No sample run is included" below is about.
 
 ## Honest scope
 

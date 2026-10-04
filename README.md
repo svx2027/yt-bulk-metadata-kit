@@ -112,3 +112,15 @@ channel, which is exactly what "No sample run is included" below is about.
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+## Related tools
+
+- [yt-playlist-seo-pipeline](https://github.com/svx2027/yt-playlist-seo-pipeline):
+  a heavier version of the same job — transcript-grounded title/description
+  rewrites and chapter building, not just a fixed title suffix and tag/
+  description replace.
+- [yt-mastersheet-kit](https://github.com/svx2027/yt-mastersheet-kit): same
+  snapshot-then-verify discipline, applied to tracking a channel's uploads
+  instead of rewriting a playlist's metadata.
+
+Full index of all public repos: [github.com/svx2027](https://github.com/svx2027).
